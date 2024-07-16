@@ -28,7 +28,7 @@ margin-left: 80px;
 }
 
 @media (max-width: 768px) {
-  img {
+  img, .products {
     width: 100%;
     height: auto;
     
@@ -55,4 +55,12 @@ footer{
     border-top: 1px solid #f9f7fe;
     padding-top: 20px;
     margin-top: 30px;
+}
+
+@media(max-width:768px){
+    footer{
+        flex-direction: column;
+        
+
+    }
 }
