@@ -65,6 +65,10 @@
         </p>
       </section>
 
+<div class="listProduct">
+
+
+
       <main>
         <div class="container">
           <div class="row">
@@ -244,8 +248,21 @@
 
       <div class="cart-details" id="cart-details">
         <h2>Shopping Cart</h2>
-        <div id="cart-items"></div>
+        <div id="cart-items"></div>       
+        <div class="cart-summary">
         <p>Total: $<span id="total-amount">0</span></p>
+        <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="text"
+              placeholder="Coupon Code"
+              id="coupon-code"
+              aria-label="Search"
+            />
+            <button type="button" class="btn btn-success me-2" id="apply-coupon">Apply Coupon</button>
+        </form>
+        <button type="button" class="btn btn-success me-2" id="checkout">Checkout</button>
+      </div>
       </div>
 
       <footer>
