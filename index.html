@@ -81,7 +81,8 @@
               <button
                 type="button"
                 class="btn btn-success"
-                onclick="addToCart('hiking boots', 2,200.00)"
+                id="hikingBoots"
+                 onclick="addToCart('Hiking Boots', 2,200.00)"
               >
                 Add to Cart
               </button>
@@ -100,6 +101,7 @@
               <button
                 type="button"
                 class="btn btn-success"
+                id="campTent"
                 onclick="addToCart('camp tent', 3,500.00)"
               >
                 Add to Cart
@@ -119,6 +121,7 @@
               <button
                 type="button"
                 class="btn btn-success"
+                id="doubleSleeper"
                 onclick="addToCart('double sleeper', 1,300.00)"
               >
                 Add to Cart
@@ -138,6 +141,7 @@
               <button
                 type="button"
                 class="btn btn-success"
+                id="picnicBagpack"
                 onclick="addToCart('Picnic bagpack', 1,200.00)"
               >
                 Add to Cart
@@ -157,6 +161,7 @@
               <button
                 type="button"
                 class="btn btn-success"
+                id="campChair"
                 onclick="addToCart('camp chair', 900.00)"
               >
                 Add to Cart
@@ -176,6 +181,7 @@
               <button
                 type="button"
                 class="btn btn-success"
+                id="coolerStorage"
                 onclick="addToCart('cooler storage', 650.00)"
               >
                 Add to Cart
@@ -195,6 +201,7 @@
               <button
                 type="button"
                 class="btn btn-success"
+                id="gasStove"
                 onclick="addToCart('gas stove', 1,600.00)"
               >
                 Add to Cart
@@ -214,6 +221,7 @@
               <button
                 type="button"
                 class="btn btn-success"
+                id="lamp"
                 onclick="addToCart('lamp', 300.00)"
               >
                 Add to Cart
@@ -233,7 +241,8 @@
               <button
                 type="button"
                 class="btn btn-success"
-                onclick="addToCart('camping shower', 1,500.00)"
+                id="shower"
+                onclick="addToCart('camping shower', 1,500.00)" id="addButton"
               >
                 Add to Cart
               </button>
@@ -242,9 +251,11 @@
         </div>
       </main>
 
-      <div class="cart-details" id="cart-details">
+      <div class="cart-details hidden" id="cart-details">
         <h2>Shopping Cart</h2>
-        <div id="cart-items"></div>       
+        <div id="cart-items">
+         
+        </div>       
         <div class="cart-summary">
         <p>Total: $<span id="total-amount">0</span></p>
         <form class="d-flex" role="search">

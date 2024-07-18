@@ -45,9 +45,10 @@ body {
   justify-content: center; /* Center horizontally */
   font-size: 12px; /* Add this to adjust the number font size */
 }
-
-.cart-details {
+.hidden {
   display: none;
+}
+.cart-details {
   position: fixed;
   top: 50px;
   right: 10px;
