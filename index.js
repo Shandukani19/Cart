@@ -37,7 +37,7 @@ const addToCart = (product_id) => {
 
 
 
-//chatgbt code
+//first code
 
 let cart = [];
 
