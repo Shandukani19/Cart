@@ -33,17 +33,17 @@ body {
 .cart-count {
   background: red;
   color: white;
-  border-radius: 50%; /* Change this to make it a perfect circle */
+  border-radius: 50%;
   height: 20px;
-  width: 20px; /* Add this to make it a square */
-  padding: 0; /* Remove the padding */
+  width: 20px;
+  padding: 0;
   top: -10px;
   right: 10px;
   position: relative;
-  display: flex; /* Add this to center the number */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  font-size: 12px; /* Add this to adjust the number font size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
 }
 
 .cart-details {
@@ -66,8 +66,8 @@ body {
   border-bottom: 1px solid #f9f7fe;
 }
 
-.container {
-  margin-left: 80px;
+.row {
+  margin-left: 120px;
 }
 
 .products {
@@ -80,19 +80,19 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
-    flex-wrap: nowrap; /* Prevent items from wrapping */
+    flex-wrap: nowrap;
   }
 
   nav form {
     flex-direction: row;
     gap: 5px;
-    flex-grow: 1; /* Ensure form takes available space */
+    flex-grow: 1;
     margin-right: 10px;
   }
 
   .navbar .cart-icon,
   .navbar .btn-success {
-    flex-shrink: 0; /* Prevent buttons from shrinking */
+    flex-shrink: 0;
     margin-left: 10px;
   }
 }
