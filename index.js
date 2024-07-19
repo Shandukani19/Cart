@@ -1,4 +1,7 @@
+// Initialize an empty cart array
 let cart = [];
+
+// Function to add a product to the cart
 function addToCart(name, price, image) {
   let existingItem = cart.find((item) => item.name === name);
   if (existingItem) {
@@ -11,23 +14,27 @@ function addToCart(name, price, image) {
   updateTotalAmount();
 }
 
+// Function to update the cart count in the UI
 function updateCartCount() {
   let cartCount = document.getElementById("cart-count");
   let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
   cartCount.textContent = totalItems;
 }
 
+// Function to show cart details
 function cartDetails() {
   let cartDetails = document.getElementById("cart-details");
   cartDetails.style.display = "block";
   displayCartItems();
 }
 
+// Function to close cart details
 function closeCart() {
   let cartDetails = document.getElementById("cart-details");
   cartDetails.style.display = "none";
 }
 
+// Function to display cart items in the UI
 function displayCartItems() {
   let cartItems = document.getElementById("cart-items");
   cartItems.innerHTML = "";
@@ -35,14 +42,16 @@ function displayCartItems() {
     const itemDiv = document.createElement("div");
     itemDiv.className = "cart-item";
 
-    itemDiv.innerHTML = `<p> <img src="${item.image}"> ${item.name} - ${item.price} x ${item.quantity}</p> 
-    <button onClick = 'decreaseQuantity()' > - </button> 
-    <button onClick = 'addToCart('${item.name}')'> + </button>`;
+    itemDiv.innerHTML = `
+      <p> <img src="${item.image}"> ${item.name} - ${item.price} x ${item.quantity}</p> 
+      <button onClick='subtractQuantity("${item.name}")'> - </button> 
+      <button onClick='addQuantity("${item.name}")'> + </button>
+    `;
     cartItems.appendChild(itemDiv);
   });
 }
 
-//
+// Function to remove a product from the cart
 function removefromCart(name) {
   let itemIndex = cart.findIndex((item) => item.name === name);
   if (itemIndex > -1) {
@@ -55,6 +64,7 @@ function removefromCart(name) {
   }
 }
 
+// Function to update the total amount in the UI
 function updateTotalAmount() {
   let totalAmountSpan = document.getElementById("total-amount");
   let totalAmount = cart.reduce(
@@ -62,4 +72,28 @@ function updateTotalAmount() {
     0
   );
   totalAmountSpan.textContent = totalAmount.toFixed(2);
+}
+
+// Function to increase the quantity of a product in the cart
+function addQuantity(name) {
+  let cartProduct = cart.find((item) => item.name === name);
+  if (cartProduct) {
+    cartProduct.quantity++;
+  }
+  updateCartCount();
+  displayCartItems();
+  updateTotalAmount();
+}
+
+// Function to decrease the quantity of a product in the cart
+function subtractQuantity(name) {
+  let cartProduct = cart.find((item) => item.name === name);
+  if (cartProduct && cartProduct.quantity > 1) {
+    cartProduct.quantity--;
+  } else {
+    cart = cart.filter((item) => item.name !== name);
+  }
+  updateCartCount();
+  displayCartItems();
+  updateTotalAmount();
 }
