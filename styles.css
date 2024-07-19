@@ -68,8 +68,8 @@ body {
 
 .cartImage {
   height: 100px;
+  width: 20vh;
 }
-
 /* cart positioning */
 
 .heading {
@@ -141,6 +141,13 @@ footer {
   footer {
     flex-direction: column;
   }
+}
+
+a {
+  color: #0b8457;
+}
+a:visited {
+  color: #17b794;
 }
 
 /* SHOPPING CART */
