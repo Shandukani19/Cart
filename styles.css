@@ -45,16 +45,25 @@ body {
   justify-content: center; /* Center horizontally */
   font-size: 12px; /* Add this to adjust the number font size */
 }
-.hidden {
-  display: none;
-}
+
 .cart-details {
+  max-height: 700px;
+  width: 550px;
+  overflow-y: auto;
+  display: none;
   position: fixed;
   top: 50px;
   right: 10px;
   border: 1px solid #ccc;
   padding: 20px;
   background: white;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f9f7fe;
 }
 
 .container {
