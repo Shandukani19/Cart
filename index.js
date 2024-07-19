@@ -53,9 +53,9 @@ function displayCartItems() {
      <div class="productPrice"> ${item.price} </div>
 
       <div class="quantityButtons">
-      <button onClick='subtractQuantity("${item.name}")'> - </button> 
+      <button onClick='subtractQuantity("${item.name}")' class="btn btn-outline-success"> - </button> 
      <p> ${item.quantity}</p>
-      <button onClick='addQuantity("${item.name}")'> + </button>
+      <button onClick='addQuantity("${item.name}")' class="btn btn-outline-success"> + </button>
       </div>
 
     </div>

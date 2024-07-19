@@ -54,7 +54,8 @@ body {
   position: fixed;
   top: 50px;
   right: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #0b8457;
+  border-radius: 5px;
   padding: 20px;
   background: white;
 }
@@ -64,11 +65,20 @@ body {
   display: flex;
   justify-content: space-between;
   width: 55vh;
+  border-bottom: 1px solid #0b8457;
 }
 
 .cartImage {
   height: 100px;
   width: 20vh;
+}
+
+.quantityButtons {
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  width: 15vh;
+  padding: 1px;
 }
 /* cart positioning */
 
@@ -120,6 +130,9 @@ body {
 h1 {
   margin-top: 40px;
   padding-bottom: 10px;
+}
+h3 {
+  text-align: center;
 }
 
 .paragraph {
