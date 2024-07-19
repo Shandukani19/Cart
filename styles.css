@@ -59,6 +59,19 @@ body {
   background: white;
 }
 
+/* cart positioning */
+.productPositioning {
+  display: flex;
+  justify-content: space-between;
+  width: 55vh;
+}
+
+.cartImage {
+  height: 100px;
+}
+
+/* cart positioning */
+
 .heading {
   display: flex;
   justify-content: space-between;
@@ -72,7 +85,9 @@ body {
 }
 
 .row {
-  margin-left: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .products {

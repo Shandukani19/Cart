@@ -43,9 +43,22 @@ function displayCartItems() {
     itemDiv.className = "cart-item";
 
     itemDiv.innerHTML = `
-      <p> <img src="${item.image}"> ${item.name} - ${item.price} x ${item.quantity}</p> 
+    <div class="productPositioning">
+
+     <div class="productImage">
+       <div> <img src="${item.image}" class="cartImage"/> </div>
+         <div> ${item.name} </div>
+     </div>
+
+     <div class="productPrice"> ${item.price} </div>
+
+      <div class="quantityButtons">
       <button onClick='subtractQuantity("${item.name}")'> - </button> 
+     <p> ${item.quantity}</p>
       <button onClick='addQuantity("${item.name}")'> + </button>
+      </div>
+
+    </div>
     `;
     cartItems.appendChild(itemDiv);
   });
