@@ -150,6 +150,10 @@ footer {
   margin-top: 30px;
 }
 
+.coder{
+  font-family: monospace;
+}
+
 @media (max-width: 768px) {
   footer {
     flex-direction: column;
