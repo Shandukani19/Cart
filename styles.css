@@ -127,12 +127,17 @@ body {
   }
 }
 
+
+
 h1 {
   margin-top: 40px;
   padding-bottom: 10px;
+  color: #0b8457;
+  background-color:;
 }
 h3 {
   text-align: center;
+  color: #0b8457;
 }
 
 .paragraph {
@@ -150,7 +155,7 @@ footer {
   margin-top: 30px;
 }
 
-.coder{
+.coder {
   font-family: monospace;
 }
 
